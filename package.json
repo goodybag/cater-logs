@@ -1,0 +1,22 @@
+{
+  "name": "cater-logs",
+  "version": "1.0.0",
+  "description": "Goodybag's log server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goodybag/cater-logs.git"
+  },
+  "author": "John Fawcett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goodybag/cater-logs/issues"
+  },
+  "homepage": "https://github.com/goodybag/cater-logs",
+  "dependencies": {
+    "loglog-server": "^1.0.2"
+  }
+}
