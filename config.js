@@ -11,20 +11,23 @@ var config = {
     mongoConnStr:     local.mongoConnStr
   , mongoCollection:  'logs'
   , port:             local.port || 3001
+  , url:              'http://localhost:' + (local.port || 3001)
   , numWorkers:       2
   }
 
 , staging: {
-    mongoConnStr:     process.env['MONGOHQ_URL']
+    mongoConnStr:     process.env['MONGO_URL']
   , mongoCollection:  'logs'
   , port:             process.env['PORT']
+  , url:              process.env['SERVER_URL']
   , numWorkers:       2
   }
 
 , prod: {
-    mongoConnStr:     process.env['MONGOHQ_URL']
+    mongoConnStr:     process.env['MONGO_URL']
   , mongoCollection:  'logs'
   , port:             process.env['PORT']
+  , url:              process.env['SERVER_URL']
   , numWorkers:       2
   }
 };

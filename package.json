@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/goodybag/cater-logs",
   "dependencies": {
-    "loglog-server": "^1.0.2"
+    "loglog-server": "^1.0.4"
   },
   "engines": {
     "node": "0.10.x"

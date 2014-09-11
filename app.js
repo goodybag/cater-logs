@@ -1,6 +1,6 @@
 var cluster = require('cluster');
 var config  = require('./config');
-console.log(config);
+
 if ( cluster.isMaster ){
   for ( var i = 0; i < config.numWorkers; i++ ){
     cluster.fork();
@@ -17,6 +17,8 @@ if ( cluster.isMaster ){
     connection: config.mongoConnStr
   , collection: config.mongoCollection
   }));
+
+  server.set( 'url', config.url );
 
   server.use( function( error, req, res, next ){
     console.log('Server error. Shutting down worker');
