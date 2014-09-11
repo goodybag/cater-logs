@@ -1,6 +1,6 @@
 var cluster = require('cluster');
 var config  = require('./config');
-console.log('staging')
+console.log(config);
 if ( cluster.isMaster ){
   for ( var i = 0; i < config.numWorkers; i++ ){
     cluster.fork();
